@@ -66,14 +66,14 @@
 html+="</div>";
 var site = SitesApp.getSite("axelbiotech.com", "tw");
 console.log('site:'+site);
-var page = site.getChildByName("you-hui-huo-dong");
+//var page = site.getChildByName("you-hui-huo-dong");
 
-// var page = "https://sites.google.com/a/axelbiotech.com/tw/you-hui-huo-dong";
+// var page = 'https://sites.google.com/a/axelbiotech.com/tw/you-hui-huo-dong';
 var attachments = page.getAttachments();
 var announcements = page.getAnnouncements();
 html+= announcements[1].getTitle();
 
-console.log(html);
+Logger.log(html);
 </script>
 <p><img src="https://sites.google.com/a/axelbiotech.com/tw/_/rsrc/1391571287285/you-hui-huo-dong/pde1.png" width="209" height="141" />
 </p>
