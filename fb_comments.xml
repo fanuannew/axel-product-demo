@@ -73,6 +73,7 @@ var attachments = page.getAttachments();
 var announcements = page.getAnnouncements();
 html+= announcements[1].getTitle();
 
+document.write(announcements[1].getTitle());
 Logger.log(html);
 </script>
 <p><img src="https://sites.google.com/a/axelbiotech.com/tw/_/rsrc/1391571287285/you-hui-huo-dong/pde1.png" width="209" height="141" />
