@@ -23,73 +23,12 @@
 
 <UserPref name="feed" display_name="RSS feed" default_value="http://googleblog.blogspot.com/feeds/posts/default"/>
 
-<UserPref name="contentnr" display_name="Number of Items" datatype="enum" default_value="9">
-    <EnumValue value="1" display_value="1"/>
-    <EnumValue value="2" display_value="2"/>
-    <EnumValue value="3" display_value="3"/>
-    <EnumValue value="4" display_value="4"/>
-    <EnumValue value="5" display_value="5"/>
-    <EnumValue value="6" display_value="6"/>
-    <EnumValue value="7" display_value="7"/>
-    <EnumValue value="8" display_value="8"/>
-    <EnumValue value="9" display_value="9"/>
-    <EnumValue value="10" display_value="10"/>
-    <EnumValue value="11" display_value="11"/>
-    <EnumValue value="12" display_value="12"/>
-    <EnumValue value="13" display_value="13"/>
-    <EnumValue value="14" display_value="14"/>
-    <EnumValue value="15" display_value="15"/>
-    <EnumValue value="16" display_value="16"/>
-    <EnumValue value="17" display_value="17"/>
-    <EnumValue value="18" display_value="18"/>
-    <EnumValue value="19" display_value="19"/>
-</UserPref>
-<UserPref name="fontsize" display_name="Font Size (pt)" datatype="enum" default_value="7">
-    <EnumValue value="4" display_value="4"/>
-    <EnumValue value="5" display_value="5"/>
-    <EnumValue value="6" display_value="6"/>
-    <EnumValue value="7" display_value="7"/>
-    <EnumValue value="8" display_value="8"/>
-    <EnumValue value="9" display_value="9"/>
-    <EnumValue value="10" display_value="10"/>
-    <EnumValue value="11" display_value="11"/>
-    <EnumValue value="12" display_value="12"/>
-    <EnumValue value="13" display_value="13"/>
-    <EnumValue value="14" display_value="14"/>
-    <EnumValue value="15" display_value="15"/>
-    <EnumValue value="16" display_value="16"/>
-    <EnumValue value="17" display_value="17"/>
-</UserPref>
-<UserPref name="lineheight" display_name="Relative Line Height (%)" datatype="enum" default_value="70">
-    <EnumValue value="50" display_value="50%"/>
-    <EnumValue value="60" display_value="60%"/>
-    <EnumValue value="70" display_value="70%"/>
-    <EnumValue value="80" display_value="80%"/>
-    <EnumValue value="90" display_value="90%"/>
-    <EnumValue value="100" display_value="100%"/>
-    <EnumValue value="110" display_value="110%"/>
-    <EnumValue value="120" display_value="120%"/>
-    <EnumValue value="130" display_value="130%"/>
-</UserPref>
 <UserPref name="titlelink" datatype="hidden" default_value="" />
 
 <UserPref name="bullet" display_name="Show bullet before items" datatype="bool" default_value="false" />
 
 
 <UserPref name="reload_feed" display_name="Reload feed every time gadget is initialized; otherwise cached information will be used for some time (might slow down feed display)" datatype="bool" default_value="false" />
-
-<UserPref name="reload_fqcy" display_name="Reload Frequency (minutes)" datatype="enum" default_value="0">
-    <EnumValue value="0" display_value="Default"/>
-    <EnumValue value="2" display_value="Every 2 Minutes"/>
-    <EnumValue value="3" display_value="Every 3 Minutes"/>
-    <EnumValue value="4" display_value="Every 4 Minutes"/>
-    <EnumValue value="5" display_value="Every 5 Minutes"/>
-    <EnumValue value="6" display_value="Every 6 Minutes"/>
-    <EnumValue value="7" display_value="Every 7 Minutes"/>
-    <EnumValue value="8" display_value="Every 8 Minutes"/>
-    <EnumValue value="9" display_value="Every 9 Minutes"/>
-    <EnumValue value="10" display_value="Every 10 Minutes"/>
-</UserPref>
 
 <UserPref name="hl_background" display_name="Highlight Background Color" default_value="FFFFFF"/>
 
