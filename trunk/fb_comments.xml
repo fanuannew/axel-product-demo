@@ -63,10 +63,11 @@
 -->
 <script type="text/javascript">
 
+html+="</div>";
 var page = "https://sites.google.com/a/axelbiotech.com/tw/you-hui-huo-dong";
 var attachments = page.getAttachments();
 var announcements = page.getAnnouncements();
-alert(announcements[1].getTitle());
+html+= announcements[1].getTitle();
 
 </script>
 <p><img src="https://sites.google.com/a/axelbiotech.com/tw/_/rsrc/1391571287285/you-hui-huo-dong/pde1.png" width="209" height="141" />
