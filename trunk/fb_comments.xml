@@ -80,7 +80,7 @@ Logger.log(html);
 <p><img src="https://sites.google.com/a/axelbiotech.com/tw/_/rsrc/1391571287285/you-hui-huo-dong/pde1.png" width="209" height="141" />
 </p>
 <p><a href="http://tw.yahoo.com/">連結測試</a></p>
-<p><a href=announcements[1].getTitle()>連結測試2</a></p>
+<p><a href=html>連結測試2</a></p>
 
 
 ]]>
