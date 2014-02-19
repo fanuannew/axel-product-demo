@@ -64,9 +64,9 @@
 <script type="text/javascript">
 
 html+="</div>";
-var site = SitesApp.getSite("axelbiotech.com", "tw");
-var page = site.getChildByName('you-hui-huo-dong');
-//var page = 'https://sites.google.com/a/axelbiotech.com/tw/you-hui-huo-dong';
+//var site = SitesApp.getSite("axelbiotech.com", "tw");
+//var page = site.getChildByName('you-hui-huo-dong');
+var page = SitesApp.getPageByUrl('https://sites.google.com/a/axelbiotech.com/tw/you-hui-huo-dong');
 var attachments = page.getAttachments();
 var announcements = page.getAnnouncements();
 html+= announcements[1].getTitle();
