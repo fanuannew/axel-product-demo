@@ -69,7 +69,7 @@ html+="</div>";
 var page = SitesApp.getPageByUrl('https://sites.google.com/a/axelbiotech.com/tw/you-hui-huo-dong');
 var attachments = page.getAttachments();
 var announcements = page.getAnnouncements();
-html+= announcements[1].getTitle();
+html+= 'miomio'+announcements[1].getTitle();
 
 document.write(announcements[1].getTitle());
 Logger.log(html);
