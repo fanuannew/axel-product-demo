@@ -73,19 +73,9 @@ html+= announcements[1].getTitle();
 
 document.write(announcements[1].getTitle());
 Logger.log(html);
-document.write(<p><a href="http://tw.yahoo.com/">連結測試</a></p>);
 
-function disableselect(e){
-return false
-}
-function reEnable(){
-return true
-}
-document.onselectstart=new Function ("return false")
-if (window.sidebar){
-document.onmousedown=disableselect
-document.onclick=reEnable
-}
+
+
 </script>
 <p><img src="https://sites.google.com/a/axelbiotech.com/tw/_/rsrc/1391571287285/you-hui-huo-dong/pde1.png" width="209" height="141" />
 </p>
