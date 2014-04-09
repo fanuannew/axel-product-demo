@@ -73,7 +73,9 @@ html+= 'miomio'+announcements[1].getTitle();
 
 document.write(announcements[1].getTitle());
 Logger.log(html);
-
+for (i=0; i<10; i=i+1){
+　document.write(i + "<br>");
+}
 
 
 </script>
