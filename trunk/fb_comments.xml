@@ -59,28 +59,7 @@
 <![CDATA[
 <script src="https://www.google.com/jsapi" type="text/javascript"></script>
 <script src="https://www.google.com/uds/solutions/slideshow/gfslideshow.js" type="text/javascript"></script>
-<!-- Load JS API -->
-<!-- 
-<script src="http://www.google.com/jsapi?key=ABQIAAAA0mwgEWnkbOhy6CdEvaErSxQm4Yc5mrPQl9MZqoni-aWoGX-xQRR4docKkmLCoPjMeYSRcJFIl_zhYQ"></script>
--->
-<script type="text/javascript">
-
-html+="</div>";
-//var site = SitesApp.getSite("axelbiotech.com", "tw");
-//var page = site.getChildByName('you-hui-huo-dong');
-var page = SitesApp.getPageByUrl('https://sites.google.com/a/axelbiotech.com/tw/you-hui-huo-dong');
-var attachments = page.getAttachments();
-var announcements = page.getAnnouncements();
-html+= 'miomio'+announcements[1].getTitle();
-
-document.write(announcements[1].getTitle());
-Logger.log(html);
-for (i=0; i<10; i=i+1){
-　document.write(i + "<br>");
-}
-
-google.load("feeds", "1");  
- 
+google.load("feeds", "1");
 function initialize() {
 var feed = new google.feeds.Feed("http://feeds.feedburner.com/noobsspace");
 feed.load(function(result) {
