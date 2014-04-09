@@ -79,15 +79,6 @@ for (i=0; i<10; i=i+1){
 　document.write(i + "<br>");
 }
 
-
-</script>
-<p><img src="https://sites.google.com/a/axelbiotech.com/tw/_/rsrc/1391571287285/you-hui-huo-dong/pde1.png" width="209" height="141" />
-</p>
-<p><a href="http://tw.yahoo.com/">連結測試</a></p>
-<p><a href=html>連結測試2</a></p>
-<div onclick="window.open('https://talkgadget.google.com/u/0/talkgadget/_/frame?v=1396976152&hl=zh-TW#tgtn_2r1azk','PHP.NET',config='height=450,width=450,toolbar=no');">
-由此開啟一個新視窗
-</div>
 google.load("feeds", "1");  
  
 function initialize() {
@@ -106,7 +97,16 @@ feed.load(function(result) {
   }
 });
 }
-google.setOnLoadCallback(initialize);  
+google.setOnLoadCallback(initialize);
+</script>
+<p><img src="https://sites.google.com/a/axelbiotech.com/tw/_/rsrc/1391571287285/you-hui-huo-dong/pde1.png" width="209" height="141" />
+</p>
+<p><a href="http://tw.yahoo.com/">連結測試</a></p>
+<p><a href=html>連結測試2</a></p>
+<div onclick="window.open('https://talkgadget.google.com/u/0/talkgadget/_/frame?v=1396976152&hl=zh-TW#tgtn_2r1azk','PHP.NET',config='height=450,width=450,toolbar=no');">
+由此開啟一個新視窗
+</div>
+  
 ]]>
 </Content>
 </Module>
