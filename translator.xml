@@ -11,6 +11,7 @@ title_url="__UP_titleurl__"
   <Content type="html">
 <![CDATA[
 <script src='https://googledrive.com/host/0BykclfTTti-0SlU3SDg5RUVtNlk/WFU-ts-mix.js' type='text/javascript'></script><a href='javascript:;' onclick='this.innerHTML=(this.innerHTML=="切換為簡體")?"切換為繁體":"切換為簡體";TS_Switch();'>切換為簡體</a>
+<iframe src="http://tw.yahoo.com/" height="100" width="300" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
   ]]> 
   </Content>
   </Module>
