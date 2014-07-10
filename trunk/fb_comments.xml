@@ -57,35 +57,21 @@
 
 <Content type="html">
 <![CDATA[
-<script src="https://www.google.com/jsapi" type="text/javascript"></script>
-<script src="https://www.google.com/uds/solutions/slideshow/gfslideshow.js" type="text/javascript"></script>
-google.load("feeds", "1");
-function initialize() {
-var feed = new google.feeds.Feed("http://feeds.feedburner.com/noobsspace");
-feed.load(function(result) {
-  if (!result.error) {
-    var container = document.getElementById("feed");
-    for (var i = 0; i < result.feed.entries.length; i++) {
-      var entry = result.feed.entries[i];
-      var attributes = ["title", "link", "publishedDate", "contentSnippet"];
-      document.write('a')
-       var div = document.createElement("div");
-        div.innerHTML = '<a href=' +  entry[attributes[1]] + '>' + entry[attributes[0]] + '</a>';
-        container.appendChild(div);
-    }
-  }
-});
-}
-google.setOnLoadCallback(initialize);
-</script>
-<p><img src="https://sites.google.com/a/axelbiotech.com/tw/_/rsrc/1391571287285/you-hui-huo-dong/pde1.png" width="209" height="141" />
-</p>
-<p><a href="http://tw.yahoo.com/">連結測試</a></p>
-<p><a href=html>連結測試2</a></p>
-<div onclick="window.open('https://talkgadget.google.com/u/0/talkgadget/_/frame?v=1396976152&hl=zh-TW#tgtn_2r1azk','PHP.NET',config='height=450,width=450,toolbar=no');">
-由此開啟一個新視窗
-</div>
-  
+
+<!-- Load JS API -->
+<!-- 
+<script src="http://www.google.com/jsapi?key=ABQIAAAA0mwgEWnkbOhy6CdEvaErSxQm4Yc5mrPQl9MZqoni-aWoGX-xQRR4docKkmLCoPjMeYSRcJFIl_zhYQ"></script>
+-->
+
+
+<div id="feed_titles0___MODULE_ID___" style="font-size: 9px"><center>Waiting for feed information ...</center></div>
+<div id="feed_titles1___MODULE_ID___" style="font-size: 9px; display: none;"><center>Waiting for feed information ...</center></div>
+<div id="feed_titles2___MODULE_ID___" style="font-size: 9px; display: none;"><center>Waiting for feed information ...</center></div>
+<div id="feed_titles3___MODULE_ID___" style="font-size: 9px; display: none;"><center>Waiting for feed information ...</center></div>
+
+
+<script type="text/javascript">
+
 ]]>
 </Content>
 </Module>
