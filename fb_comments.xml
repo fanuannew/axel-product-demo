@@ -131,6 +131,45 @@
 
 
 <script type="text/javascript">
+// google.load("jquery", "1");
+
+// border 
+// document.body.style.border="1px solid #aaa";
+
+var ga___MODULE_ID___;
+if (!document.URL.match("-devXX")) {
+    // _IG_Analytics("UA-568933-4", "/GHP_RSS_READER+");
+    ga___MODULE_ID___ = new _IG_GA("UA-568933-4", "/GHP_RSS_READER+");
+    ga___MODULE_ID___.reportPageview('GHP_RSS_READER+');
+    if (document.documentElement && document.documentElement.clientWidth) {
+        w = document.documentElement.clientWidth;
+        h = document.documentElement.clientHeight;
+        // console.log("w h ", w, h);
+        // ga___MODULE_ID___.reportEvent("RSS_Size", ""+w, ""+h, 0);
+    }
+} else {
+    // alert ("ga -dev");
+}
+
+var prefs = new gadgets.Prefs();
+feed = prefs.getString("feed");
+var g_feed_arr = [];
+g_feed_arr[0] = feed;
+content_nr = prefs.getInt("contentnr");
+font_size = prefs.getInt("fontsize");
+g_bullet = prefs.getBool("bullet");
+g_age = prefs.getBool("age");
+g_no_link_decoration = prefs.getBool("no_link_decoration");
+g_reload_feed = prefs.getBool("reload_feed");
+g_reload_fqcy = prefs.getInt("reload_fqcy");
+g_lineheight = prefs.getInt("lineheight");
+g_hl_background = prefs.getString("hl_background");
+g_font_color = prefs.getString("font_color");
+g_bkg_color = prefs.getString("bkg_color");
+g_inline_sum_background = prefs.getString("inline_sum_background");
+g_show_summary = prefs.getInt("show_summary");
+feed2 = prefs.getString("feed2");
+// console.log("feed2", feed2);
 
 ]]>
 </Content>
