@@ -171,6 +171,80 @@ g_show_summary = prefs.getInt("show_summary");
 feed2 = prefs.getString("feed2");
 // console.log("feed2", feed2);
 
+if (feed2 != "" && feed2.search(/ +/) < 0) {
+    // g_feed_arr[1] = feed2;
+    g_feed_arr.push(feed2);
+}
+feed3 = prefs.getString("feed3");
+if (feed3 != "" && feed3.search(/ +/)  < 0 ) {
+    g_feed_arr[2] = feed3;
+}
+feed4 = prefs.getString("feed4");
+if (feed4 != "" && feed4.search(/ +/)  < 0 ) {
+    g_feed_arr[3] = feed4;
+}
+font_fam = prefs.getString("font_family");
+// console.log("feed arr", g_feed_arr);
+ga___MODULE_ID___.reportEvent("RSS Reader", "feed nr" , g_feed_arr.length);
+        
+if (g_show_summary == 1) {
+    g_tooltip_summary = true;
+} else {
+    g_tooltip_summary = false;
+}    
+ga___MODULE_ID___.reportEvent("RSS Reader", "summary" , g_show_summary);
+// ga___MODULE_ID___.reportPageview("RSS Reader/summary/"+g_show_summary);
+
+// get size
+var g_viewport = gadgets.window.getViewportDimensions();
+// console.log(g_viewport);
+
+// alert(feed + " " + content_nr + " " );
+// debug(document.location.href);
+
+// http://blogoscoped.com/rss.xml
+// http://googleblog.blogspot.com/feeds/posts/default
+
+var g_synd=0;
+// alert(document.location.href);
+if (_args()["synd"] || _args()["container"]) {
+    // alert("synd");
+    var platform = _args()["synd"];
+    if (platform != "ig") { 
+        g_synd=1;
+        // get args differently
+        var amp=document.location.href.indexOf("&amp;")>=0?"amp;":"";
+        feed=_args()[amp+"up_feed"];
+        content_nr=_args()[amp+"up_contentnr"] != "" ? 1.0*_args()[amp+"up_contentnr"]:9;
+        font_size=_args()[amp+"up_fontsize"] != "" ? _args()[amp+"up_fontsize"]:"9";
+        font_fam=_args()[amp+"up_font_family"] != "" ? _args()[amp+"up_font_family"]:"arial, sans-serif";
+        // debug("not ig " + feed + " " + content_nr + _args());
+    }
+}
+
+// alert("X"+prefs.getString("title")+"X");
+if (prefs.getString("title") != "") {
+    try {
+        gadgets.window.setTitle(prefs.getString("title"));
+    } catch (err) {}
+} else {
+    try {
+        gadgets.window.setTitle("RSS Reader+");
+        // gadgets.window.setTitle("RSS +: " + content.Title);
+    } catch (err) {}
+}
+
+var entries = 10;
+var summaries = true;
+
+var params = {};  
+
+params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
+params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
+params[gadgets.io.RequestParameters.GET_SUMMARIES] = summaries; 
+
+// http://www.bestblog.de/?feed=rss2
+// http://shop.ebay.com/mistymountaindew/m.html?_ipg=&_rss=1
 ]]>
 </Content>
 </Module>
