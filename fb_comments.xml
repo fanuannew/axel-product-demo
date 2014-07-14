@@ -244,7 +244,278 @@ params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);
 params[gadgets.io.RequestParameters.GET_SUMMARIES] = summaries; 
 
 // http://www.bestblog.de/?feed=rss2
-// http://shop.ebay.com/mistymountaindew/m.html?_ipg=&_rss=1
+// http://shop.ebay.com/mistymountaindew/m.html?_ipg=&_rss=1function set_content(obj, feed_idx)
+{
+    // obj.data contains the feed data
+    var feed = obj.data;
+    // console.log(feed);
+    var html = "";
+
+    // console.log("feed_idx", feed_idx);
+
+    if (!feed_idx) feed_idx = 0;
+
+    // alert(feed);
+    var html = "<div>";
+    // alert(feed.Entry[1].Summary);
+    // alert(feed.Title);
+    if (prefs.getString("title") == "") {
+        try {
+            gadgets.window.setTitle("RSS+: " + feed.Title.substr(0,30));
+        } catch (err) {}
+    }
+    var str, sum, l_title, sum2;
+    // loop through entries
+    for (var i in feed.Entry) {
+        str=""; sum=""; sum2="";
+        l_title = feed.Entry[i].Title;
+        if (feed.Entry[i].Summary) {
+            // str='title="'+ feed.Entry[i].Summary +'"';
+            sum = feed.Entry[i].Summary;
+            // sum = sum.replace(/href=".*"/g, "");
+            sum = sum.replace(/<div[^>]*>/g, "").replace(/<[^>]*>/g, "");
+            sum = sum.replace(/  */g, " ").replace(/\n\n+/g,"\n\n");
+            sum2 = sum.replace(/"/g, "");  // problem with indentation
+            // console.log(sum);
+            if (l_title != feed.Entry[i].Summary) {
+               sum = l_title + "\n\n" + sum2;
+            } else {
+                sum = "";
+            }
+        }
+        id="id"+i+"_"+feed_idx;
+        hover='id="'+id+'" onMouseover="javascript: mouse_over_cb(\''+id+'\');" onMouseout="javascript: mouse_out_cb(\''+id+'\')" ';
+        s_fontcol="";
+        if (g_font_color  != "") {
+          s_fontcol="color: #"+g_font_color+";";
+        }
+        style=' style="font-size:'+ font_size +'pt; font-family: ' + font_fam +';' + s_fontcol  ;
+        // if (i < 2)   alert(style);
+        if (g_bullet) {
+            bullet="&#187;&nbsp;";
+        } else {
+            bullet="";
+        }
+        if (g_no_link_decoration) 
+           style=style+" text-decoration: none; ";
+
+        style=style+'"';
+        // var milliseconds = (feed.Entry[i].Date) * 1000; 
+        // var milliseconds = (feed.Entry[i].Date); 
+        var l_date_str = "";
+        var date = new Date(feed.Entry[i].Date); 
+        var s_diff_date="";
+        if (g_age) {
+         var diff_date = ((new Date).valueOf() - date.valueOf())/1000;
+         if (diff_date < 3600) {
+            s_diff_date = Math.round(diff_date/60) + " min ago";
+         } else {
+           diff_date/=3600.;
+           if (diff_date < 24) {
+              s_diff_date =  Math.round(diff_date) + " h ago";
+           } else {
+             diff_date/=24.;
+             s_diff_date =  Math.round(diff_date) + " days ago";
+           }
+         }
+         // s_diff_date= '  <span style=" ">(' + s_diff_date + ")</span>";
+         s_diff_date= ' <span '+style+'"> (' + s_diff_date + ")</span>";
+        }
+        // l_date = date.toLocaleDateString() + ": ";
+        //      l_d += date.toLocaleTimeString(); 
+        // console.log(date.toLocaleDateString());
+        var l_locdate = date.toLocaleDateString();
+        if (g_tooltip_summary) {
+            sum=l_locdate + "\n" + sum;
+        } else {
+            sum=l_locdate + "\n" + feed.Entry[i].Title;
+        }
+        if (g_show_summary == 2) {
+            title="";
+        } else {
+            title=' title="'+_hesc(sum)+'" ';
+        }
+        // l_date_str = date.getMonth()+'/'+date.getDay()+ ": ";
+
+        html += '<TR><TD style="white-space:nowrap;"><span style="line-height: '+g_lineheight+'%;">'+bullet +'<a '+title+str+hover+' '+style+' href="' + _hesc(feed.Entry[i].Link) + '" target="_blank">';
+        html += l_date_str+_hesc(feed.Entry[i].Title) +  '</a>'+s_diff_date +'</span><div style="padding-top: 2px; padding-bottom: 2px; padding-left: 5px; display: none; border: 1px solid #aaa; white-space: normal; width: '+g_viewport.width+'px; background-color: '+g_inline_sum_background+'; font-size: 70%;" id="sum_'+id+'">'+sum2.substr(0,540)+'</div></TD></TR>';
+
+        // html += '<div style="white-space: nowrap; line-height: '+g_lineheight+'%">'+bullet+'<a '+title+str+hover+' '+style+' href="' + _hesc(feed.Entry[i].Link) + '" target="_blank">';
+        // html += l_date_str+_hesc(feed.Entry[i].Title) + '</a></div>';
+    }
+    if (feed_idx > 0 || g_feed_arr.length > 1) {
+       // console.log("feed_idx2", feed_idx);
+       div_str="feed_titles"+feed_idx+"___MODULE_ID___";
+       str_title=feed.Title.substr(0,57);
+       martop = feed_idx > 0 ? 3 : 0;
+       str_break='<div title="'+str_title+'" style="margin-top: '+martop+'px; background-color: #efefef; border: 1px solid #aaa; font-size: 100%;"><b>'+str_title+'</b></div>';
+       _gel(div_str).innerHTML = str_break + '<TABLE border="0" cellspacing="1" cellpadding="0" width="100%">' + html + '</TABLE>';
+       _gel(div_str).style.display = 'block';
+    } else {
+    _gel("feed_titles0___MODULE_ID___").innerHTML = '<TABLE border="0" cellspacing="1" cellpadding="0" width="100%">' + html + '</TABLE>';
+    }
+    if (!g_synd) {
+        gadgets.window.adjustHeight();
+    }
+
+    if (g_bkg_color != "") {
+      document.body.style.backgroundColor = "#" + g_bkg_color;
+    }
+}
+
+html+="</div>";
+
+// Loading ...
+str='<center>Waiting for feed information ...</center>';
+_gel("feed_titles0___MODULE_ID___").innerHTML = str;
+if (feed != "" && ga___MODULE_ID___) {
+    ga___MODULE_ID___.reportEvent("GHP_RSS_READER", "feed", feed);
+}
+
+function mouse_over_cb(id) {
+    document.getElementById(id).style.backgroundColor=''+g_hl_background+'';
+    if (g_show_summary == 2)
+    document.getElementById("sum_"+id).style.display = "block";
+    gadgets.window.adjustHeight();
+}
+function mouse_out_cb(id) {
+    if (g_bkg_color != "") {
+      document.getElementById(id).style.backgroundColor = "#" + g_bkg_color;
+    } else {
+      document.getElementById(id).style.backgroundColor = "";
+      // document.getElementById(id).style.backgroundColor='';
+    }
+    if (g_show_summary == 2)
+    document.getElementById("sum_"+id).style.display = "none";
+    gadgets.window.adjustHeight();
+}
+
+
+if (g_reload_feed) {
+    t = (new Date()).getTime();
+    var fi=feed.indexOf("?")>=0?"&":"?";
+    // _IG_FetchFeedAsJSON(feed+fi+"upd="+t, set_content, content_nr, false);
+    load_feed(feed+fi+"upd="+t, set_content, content_nr, false);
+} else {
+    // _IG_FetchFeedAsJSON(feed, set_content, content_nr, false);
+    // console.log("feed X"+feed+"X");
+    if (feed.length <= 0 || feed.match(/ +/)) {
+        _gel("feed_titles0___MODULE_ID___").innerHTML = "<center>Feed URL is empty ... Cannot load content ...</center>";
+    } else {
+        load_feed(feed, set_content, content_nr, false);
+    }
+}
+
+//if (!g_synd) {
+//    _IG_AdjustIFrameHeight();
+//}
+
+if (g_reload_fqcy != 0) {
+    // alert (g_reload_fqcy);
+    // g_reload_fqcy=1;
+    setTimeout('rss_reload___MODULE_ID___()', 1000*60*g_reload_fqcy);
+}
+
+// reload
+function rss_reload___MODULE_ID___ () {
+
+    // alert ("reload " + g_reload_fqcy);
+
+    t = (new Date()).getTime();
+    var fi=feed.indexOf("?")>=0?"&":"?";
+    // _IG_FetchFeedAsJSON(feed+fi+"upd="+t, set_content, content_nr, false);
+    load_feed(feed+fi+"upd="+t, set_content, content_nr, false);
+
+    setTimeout('rss_reload___MODULE_ID___()', 1000*60*g_reload_fqcy);
+
+}
+
+function load_feed (url, callback, content_nr) {
+    // console.log("load feed " + url);
+    params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(content_nr);
+    // gadgets.io.makeRequest(url, callback, params);
+    gadgets.io.makeRequest(url, function (obj) {
+       set_content(obj);
+     }, params);
+
+    if (g_feed_arr.length > 1) {
+    var feed_idx;
+    for (feed_idx = 1; feed_idx < g_feed_arr.length; feed_idx++) {
+        makeRequest_wrapper(g_feed_arr[feed_idx], feed_idx, params)
+    }
+    }
+
+};
+
+function makeRequest_wrapper (url, l_feed_idx, params) {
+
+       gadgets.io.makeRequest(url, function (l_obj) {
+           set_content(l_obj, l_feed_idx);
+        }, params);
+
+}
+
+//
+// not used presently
+//
+function get_rss_feed () {
+    t = (new Date()).getTime();
+    var fi=feed.indexOf("?")>=0?"&":"?";
+    var url=feed+fi+"upd="+t;
+    url=feed+fi+"upd="+t;
+    console.log(url);
+
+    // params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
+    // var url = "http://gadget-doc-examples.googlecode.com/svn/trunk/opensocial-gadgets/Contacts.csv";
+    gadgets.io.makeRequest(url, gio_response, params);
+}
+
+var showdate = true;
+
+function gio_response (obj) {
+    
+    // obj.data contains the feed data
+    var feed = obj.data;
+    console.log(obj.data);
+    var html = "";
+    
+    // Display the feed title and description
+    html += "<div><b>" + feed.Title + "</b></div>";
+    html += "<div>" + feed.Description + "</div><br>";
+    
+    // Access the data for a given entry
+    if (feed.Entry) {
+        for (var i = 0; i < feed.Entry.length; i++) {
+            html += "<div>"
+                + "<a target='_blank' href='" + feed.Entry[i].Link + "'>"
+                + feed.Entry[i].Title
+                + "</a> ";
+            if (showdate==true)
+                { 
+                    // The feed entry Date field contains the timestamp in seconds
+                    // since Jan. 1, 1970. To convert it to the milliseconds needed
+                    // to initialize the JavaScript Date object with the correct date, 
+                    // multiply by 1000.
+                    var milliseconds = (feed.Entry[i].Date) * 1000; 
+                    var date = new Date(milliseconds); 
+                    html += date.toLocaleDateString();
+                    html += " ";
+                    html += date.toLocaleTimeString(); 
+                }
+            if (summaries==true) { 
+                html += "<br><i>" + feed.Entry[i].Summary + "</i>";
+            }
+            html += "</div>";
+        }
+    console.log(html);
+    }        
+    // document.getElementById('content_div').innerHTML = html;
+    console.log(html);
+};
+
+// get_rss_feed ();
+
+</script>
 ]]>
 </Content>
 </Module>
