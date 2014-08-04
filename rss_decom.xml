@@ -491,6 +491,7 @@ function gio_response (obj) {
 	for (var i = 0; i < feed.Entry.length; i++) {
 	    html += "<div>"
 		+ "<a target='_blank' href='" + feed.Entry[i].Link + "'>"
+    + "<img src='" + feed.Entry[i].media$thumbnail.url + "'>"
 		+ feed.Entry[i].Title
 		+ "</a> ";
 	    if (showdate==true)
