@@ -115,6 +115,7 @@
 <UserPref name="no_link_decoration" display_name="Hide link underline " datatype="bool" default_value="false" />
 
 
+
 <Content type="html">
 <![CDATA[
 
@@ -131,6 +132,7 @@
 
 
 <script type="text/javascript">
+
 // google.load("jquery", "1");
 
 // border 
@@ -170,7 +172,6 @@ g_inline_sum_background = prefs.getString("inline_sum_background");
 g_show_summary = prefs.getInt("show_summary");
 feed2 = prefs.getString("feed2");
 // console.log("feed2", feed2);
-
 if (feed2 != "" && feed2.search(/ +/) < 0) {
     // g_feed_arr[1] = feed2;
     g_feed_arr.push(feed2);
@@ -244,7 +245,9 @@ params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);
 params[gadgets.io.RequestParameters.GET_SUMMARIES] = summaries; 
 
 // http://www.bestblog.de/?feed=rss2
-// http://shop.ebay.com/mistymountaindew/m.html?_ipg=&_rss=1function set_content(obj, feed_idx)
+// http://shop.ebay.com/mistymountaindew/m.html?_ipg=&_rss=1
+
+function set_content(obj, feed_idx)
 {
     // obj.data contains the feed data
     var feed = obj.data;
@@ -489,7 +492,6 @@ function gio_response (obj) {
             html += "<div>"
                 + "<a target='_blank' href='" + feed.Entry[i].Link + "'>"
                 + feed.Entry[i].Title
-                + "<img src='" + feed.Entry[i].media$thumbnail.url + "'>"
                 + "</a> ";
             if (showdate==true)
                 { 
