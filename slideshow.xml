@@ -255,7 +255,7 @@ document.getElementById("feed_title").innerHTML=html;
 
 function TransitionHandler(entry, transitionTime)
 {
-document.getElementById("image_title").innerHTML="<a href='" + entry.link + + "' target='_blank'>"+ entry.title +"</a><br/>";
+document.getElementById("image_title").innerHTML="<a href='" + entry.link + + "'>"+ entry.title +"</a><br/>";
 }
 
 // Get the full size (picasa send thumb from s288 (288 x 216) 
