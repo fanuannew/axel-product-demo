@@ -21,9 +21,8 @@ title_url="__UP_titleurl__"
 			}
       function ChangeDisabled(value){
 　if(value=='1'){
-　document.getElementById('TetstText').disabled=false;　// 變更欄位為可用
+　open("http://tw.yahoo.com/");
 　}else{
-　document.getElementById('TetstText').disabled=true;　// 變更欄位為禁用
 　}
 }
 		</script>
