@@ -19,6 +19,10 @@ title_url="__UP_titleurl__"
 			{
 				alert("你什么也没有输入");
 			}
+      function ElementAdd(){
+       var e = document.getElementById("content");
+       e.innerHTML = e.innerHTML + "<input type=\"text\" value=\"default\"/><br/>";
+         }
 		</script>
       <a onclick="ElementAdd()">Add</a>
         <form>
