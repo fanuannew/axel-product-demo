@@ -20,6 +20,11 @@ title_url="__UP_titleurl__"
 				alert("你什么也没有输入");
 			}
 		</script>
+      <a onclick="ElementAdd()">Add</a>
+        <form>
+            <div id="content">
+            </div>
+        </form>
   ]]> 
   </Content>
   </Module>
