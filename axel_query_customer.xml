@@ -19,12 +19,16 @@ title_url="__UP_titleurl__"
 			{
 				alert("你什么也没有输入");
 			}
-      function checkText(urid){ 
-      var str=urid.value; 
-      alert("检查"+str); 
-    } 
+      function ChangeDisabled(value){
+　if(value=='1'){
+　document.getElementById('TetstText').disabled=false;　// 變更欄位為可用
+　}else{
+　document.getElementById('TetstText').disabled=true;　// 變更欄位為禁用
+　}
+}
 		</script>
-      <input type="text" name="uid" onBlur="checkText(uid)"><br/><br>
+     <input type="text" id="TetstText">
+<input type="button" value='變更欄位為可用' onclick="ChangeDisabled(1)">
   ]]> 
   </Content>
   </Module>
