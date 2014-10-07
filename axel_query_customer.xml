@@ -19,16 +19,12 @@ title_url="__UP_titleurl__"
 			{
 				alert("你什么也没有输入");
 			}
-      function ElementAdd(){
-       var e = document.getElementById("content");
-       e.innerHTML = e.innerHTML + "<input type=\"text\" value=\"default\"/><br/>";
-         }
+      function checkText(urid){ 
+      var str=urid.value; 
+      alert("检查"+str); 
+    } 
 		</script>
-      <a onclick="ElementAdd()">Add</a>
-        <form>
-            <div id="content">
-            </div>
-        </form>
+      <input type="text" name="uid" onBlur="checkText(uid)"><br/><br>
   ]]> 
   </Content>
   </Module>
