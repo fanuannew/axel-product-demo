@@ -28,7 +28,7 @@ title_url="__UP_titleurl__"
 }
 		</script>
      <input type="text" id="TetstText">
-<input type="button" value='變更欄位為可用' onclick="ChangeDisabled(1)">
+<input type="button" value='查詢購買的客戶' onclick="ChangeDisabled(1)">
   ]]> 
   </Content>
   </Module>
