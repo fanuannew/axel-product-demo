@@ -17,7 +17,7 @@ title_url="__UP_titleurl__"
 　if(value=='1'){
  var strA = "https://docs.google.com/spreadsheets/d/1MAxYcyGdJxwN8yJlUj4u9kypTO6gyzqpXlagb4xUBhg/gviz/tq?tqx=out:html&tq=select%20D,%20H%20where%20H%20contains%20%27";
 var strB = TetstText.value;
-  var strC = "%27%20order%20by%20D;
+  var strC = "%27%20order%20by%20D";
 　open(strA.concat(strB).concat(strC));
 　}else{
 　}
