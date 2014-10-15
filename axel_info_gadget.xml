@@ -16,17 +16,12 @@ title_url="__UP_titleurl__"
         <input type="button" value="送出↓" onclick="SendMsg()" />
         <iframe src="https://m.gmail.com" id="iframe" width="100%" height="100%"></iframe>
 </div>
-
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<fb:comments href="__UP_URL__"
-data-numposts="20" width="400">
-</fb:comments>
+<script type="text/javascript">
+function SendMsg()
+    var iframe = document.getElementById('youriframe');
+    iframe.src = iframe.src;
+}
+</script>
   ]]> 
   </Content>
   </Module>
