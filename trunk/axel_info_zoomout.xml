@@ -8,14 +8,18 @@ title_url="__UP_titleurl__"
 /> 
   <UserPref name="title" display_name="title" datatype="string" required="false" default_value="Comments" />
   <UserPref name="URL" display_name="想要開啟的視窗網頁" required="true" default_value="http://www.axelbiotech.com"/>
+  <UserPref name="w_height" display_name="視窗高:" default_value="20"/>
+  <UserPref name="w_width" display_name="視窗寬:" default_value="30"/>
   <Content type="html">
 <![CDATA[ <div id="fb-root"></div>
 <script>
 url = prefs.getString("URL");
+w_height = prefs.getInt("wheight");
+w_width = prefs.getInt("wwidth");
 
 function ChangeDisabled(value){
 　if(value=='1'){
- window.open(URL, 'Yahoo', config='height=500,width=500');
+ window.open(URL, 'Yahoo', config='height=wheight,width=wwidth');
 　}else{}
 }
 </script>
