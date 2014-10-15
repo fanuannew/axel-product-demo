@@ -7,19 +7,22 @@
   title_url="http://www.axelbiotech.com"
 /> 
   <UserPref name="title" display_name="title" datatype="string" required="false" default_value="Comments" />
-  <UserPref name="openme" display_name="想要開啟的視窗網頁" required="true" default_value="http://www.axelbiotech.com"/>
+  <UserPref name="feed" display_name="想要開啟的視窗網頁" required="true" default_value="http://www.axelbiotech.com"/>
   <UserPref name="w_height" display_name="視窗高:" default_value="480"/>
   <UserPref name="w_width" display_name="視窗寬:" default_value="600"/>
   <Content type="html">
 <![CDATA[ <div id="fb-root"></div>
 <script>
-openme = prefs.getString("openme");
+feed = prefs.getString("openme");
 wheight = prefs.getInt("w_height");
 wwidth = prefs.getInt("w_width");
 url URL = "http://www.msn.com/";
+var g_feed_arr = [];
+g_feed_arr[0] = feed;
+
 function ChangeDisabled(value){
 　if(value=='1'){
-  window.open(URL, "_blank","resizable=yes, left=30, width=1000, height=500");
+  window.open(g_feed_arr[0], "_blank","resizable=yes, left=30, width=1000, height=500");
 　}else{}
 }
 </script>
