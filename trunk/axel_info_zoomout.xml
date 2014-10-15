@@ -20,9 +20,12 @@ wwidth = prefs.getInt("w_width");
 var g_feed_arr = [];
 g_feed_arr[0] = feed;
 
+var PosX = (screen.width-wwidth)/2; 
+var PosY = (screen.Height-wheight)/2; 
+
 function ChangeDisabled(value){
 　if(value=='1'){
-  window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth );
+  window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
 　}else{}
 }
 </script>
