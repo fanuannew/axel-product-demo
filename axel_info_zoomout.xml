@@ -19,7 +19,7 @@ wwidth = prefs.getInt("w_width");
 var URL = "http://www.msn.com/";
 function ChangeDisabled(value){
 　if(value=='1'){
-  window.open(URL, "", config="height=wheight,width=wwidth");
+  window.open(URL, "_blank","resizable=yes, left=30, width=1000, height=500");
 　}else{}
 }
 </script>
