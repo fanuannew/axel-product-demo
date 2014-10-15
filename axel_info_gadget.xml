@@ -14,7 +14,7 @@ title_url="__UP_titleurl__"
         A.htm
         <input type="text" id="T1" size="20" />
         <input type="button" value="送出↓" onclick="SendMsg()" />
-        <iframe src="http://tw.yahoo.com/" id="iframe" width="100%" height="100%"></iframe>
+        <iframe src="m.gmail.com" id="iframe" width="100%" height="100%"></iframe>
 </div>
 
 <script>(function(d, s, id) {
