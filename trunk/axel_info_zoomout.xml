@@ -27,7 +27,7 @@ function ChangeDisabled(value){
 }
 </script>
 <input type="button" value='放大' onclick="ChangeDisabled(1)">
-<a href="#" onclick="window.open(openme , 'Yahoo', config='height=wheight,width=wwidth');">開新視窗</a>
+<a href="#" onclick="window.open(g_feed_arr[0] , 'Yahoo', config='height=wheight,width=wwidth');">開新視窗</a>
   ]]> 
   </Content>
   </Module>
