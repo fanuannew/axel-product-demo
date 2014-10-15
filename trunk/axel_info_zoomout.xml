@@ -2,8 +2,8 @@
 <Module>  
 <ModulePrefs title="axel_zoomout" directory_title="zoomout" 
    scrolling="true"
-   height="400" 
-   width="100%"
+   height="26" 
+   width="26"
   title_url="http://www.axelbiotech.com"
 /> 
   <UserPref name="title" display_name="title" datatype="string" required="false" default_value="Comments" />
