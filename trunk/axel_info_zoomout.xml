@@ -16,7 +16,7 @@
 openme = prefs.getString("openme");
 wheight = prefs.getInt("w_height");
 wwidth = prefs.getInt("w_width");
-var URL = "http://www.msn.com/";
+url URL = "http://www.msn.com/";
 function ChangeDisabled(value){
 　if(value=='1'){
   window.open(URL, "_blank","resizable=yes, left=30, width=1000, height=500");
