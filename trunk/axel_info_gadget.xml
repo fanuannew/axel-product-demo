@@ -18,7 +18,7 @@ title_url="__UP_titleurl__"
 </div>
 <script type="text/javascript">
 function SendMsg()
-    var iframe = document.getElementById(iframe);
+    var iframe = document.getElementById('iframe');
     iframe.src = iframe.src;
 }
 </script>
