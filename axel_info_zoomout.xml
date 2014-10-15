@@ -15,7 +15,7 @@ url = prefs.getString("URL");
 
 function ChangeDisabled(value){
 　if(value=='1'){
- window.open('url', 'Yahoo', config='height=500,width=500');
+ window.open(URL, 'Yahoo', config='height=500,width=500');
 　}else{}
 }
 </script>
