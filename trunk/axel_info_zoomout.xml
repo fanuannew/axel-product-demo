@@ -10,17 +10,12 @@ title_url="__UP_titleurl__"
   <UserPref name="URL" display_name="想要開啟的視窗網頁" required="true" default_value="http://www.axelbiotech.com"/>
   <Content type="html">
 <![CDATA[ <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+<script>
+url = prefs.getString("URL");
 
 function ChangeDisabled(value){
 　if(value=='1'){
- window.open('URL', 'Yahoo', config='height=500,width=500');
+ window.open('url', 'Yahoo', config='height=500,width=500');
 　}else{}
 }
 </script>
