@@ -22,7 +22,7 @@ g_feed_arr[0] = feed;
 
 function ChangeDisabled(value){
 　if(value=='1'){
-  window.open(g_feed_arr[0], "_blank", config="height=wheight,width=wwidth" );
+  window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth );
 　}else{}
 }
 </script>
