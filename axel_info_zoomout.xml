@@ -26,7 +26,7 @@ function ChangeDisabled(value){
 　}else{}
 }
 </script>
-<input type="button" value='↗' style="font-size:8px" onclick="ChangeDisabled(1)">
+<input type="button" value='↗' style="width:20px;height:20px" onclick="ChangeDisabled(1)">
   ]]> 
   </Content>
   </Module>
