@@ -14,8 +14,8 @@ title_url="__UP_titleurl__"
 <![CDATA[ <div id="fb-root"></div>
 <script>
 url = prefs.getString("URL");
-w_height = prefs.getInt("wheight");
-w_width = prefs.getInt("wwidth");
+wheight = prefs.getInt("w_height");
+wwidth = prefs.getInt("w_width");
 
 function ChangeDisabled(value){
 　if(value=='1'){
