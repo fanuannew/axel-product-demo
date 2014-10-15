@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>  
-<ModulePrefs title="__UP_title__" directory_title="zoomout" 
+<ModulePrefs title="axel_zoomout" directory_title="zoomout" 
    scrolling="true"
    height="400" 
    width="100%"
-title_url="__UP_titleurl__"
+  title_url="http://www.axelbiotech.com"
 /> 
   <UserPref name="title" display_name="title" datatype="string" required="false" default_value="Comments" />
   <UserPref name="openme" display_name="想要開啟的視窗網頁" required="true" default_value="http://www.axelbiotech.com"/>
