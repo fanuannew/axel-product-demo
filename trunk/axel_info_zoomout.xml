@@ -8,8 +8,8 @@ title_url="__UP_titleurl__"
 /> 
   <UserPref name="title" display_name="title" datatype="string" required="false" default_value="Comments" />
   <UserPref name="URL" display_name="想要開啟的視窗網頁" required="true" default_value="http://www.axelbiotech.com"/>
-  <UserPref name="w_height" display_name="視窗高:" default_value="20"/>
-  <UserPref name="w_width" display_name="視窗寬:" default_value="30"/>
+  <UserPref name="w_height" display_name="視窗高:" default_value="480"/>
+  <UserPref name="w_width" display_name="視窗寬:" default_value="600"/>
   <Content type="html">
 <![CDATA[ <div id="fb-root"></div>
 <script>
@@ -19,12 +19,12 @@ wwidth = prefs.getInt("w_width");
 
 function ChangeDisabled(value){
 　if(value=='1'){
- window.open(URL, 'Yahoo', config='height=wheight,width=wwidth');
+ window.open(url, 'Yahoo', config='height=wheight,width=wwidth');
 　}else{}
 }
 </script>
 <input type="button" value='放大' onclick="ChangeDisabled(1)">
-<a href="#" onclick="window.open(' http://tw.yahoo.com ', 'Yahoo', config='height=500,width=500');">開新視窗</a>
+<a href="#" onclick="window.open(' http://tw.yahoo.com ', 'Yahoo', config='height=wheight,width=wwidth');">開新視窗</a>
   ]]> 
   </Content>
   </Module>
