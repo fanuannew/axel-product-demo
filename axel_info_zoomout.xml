@@ -16,11 +16,10 @@ title_url="__UP_titleurl__"
 openme = prefs.getString("openme");
 wheight = prefs.getInt("w_height");
 wwidth = prefs.getInt("w_width");
-
+var URL = "http://www.msn.com/";
 function ChangeDisabled(value){
 　if(value=='1'){
- var wnd = window.open(wheight, 'Yahoo', config='height=wheight,width=wwidth');
- wnd.document.write(openme);
+  window.open(URL, 'Yahoo', config='height=wheight,width=wwidth');
 　}else{}
 }
 </script>
