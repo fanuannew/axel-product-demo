@@ -20,7 +20,7 @@ wwidth = prefs.getInt("w_width");
 function ChangeDisabled(value){
 　if(value=='1'){
  var wnd = window.open('about:blank', 'Yahoo', config='height=wheight,width=wwidth');
- wnd.document.write(url);
+ wnd.document.write(urlto);
 　}else{}
 }
 </script>
