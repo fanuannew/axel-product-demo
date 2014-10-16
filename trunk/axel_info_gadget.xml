@@ -2,8 +2,8 @@
 <Module>  
 <ModulePrefs title="Dynamic Height" 
     scrolling="true"
-   height="26" 
-   width="26"
+   height="200" 
+   width="180"
   title_url="http://www.axelbiotech.com"
 /> 
 
