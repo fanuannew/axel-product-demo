@@ -15,7 +15,7 @@ title_url="__UP_titleurl__">
 <div>
         A.htm
         <input type="text" id="T1" size="20" />
-        <input type="button" value="重整" onclick="SendMsg()" />
+        <input type="button" value="重調視窗" onclick="SendMsg()" />
         <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14561.35182328995!2d120.6717438!3d24.1598777!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1413424299697" width="600" height="550" frameborder="0" style="border:0"></iframe>
 </div>
 <script type="text/javascript">
