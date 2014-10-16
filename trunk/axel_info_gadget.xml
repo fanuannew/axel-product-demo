@@ -19,7 +19,7 @@ function SendMsg()
 }
 </script>
 <div style="float:right">
-        <input style="float:right;width:25px;height:16px" type="button" value="┿" onclick="SendMsg()" />
+        <input style="float:right;width:25px;height:16px" type="button" value="+" onclick="SendMsg()" />
         <iframe src="b.htm" id="iframe" width="100%" height="100%"></iframe>
 
     </div>
