@@ -4,9 +4,10 @@
    scrolling="true"
    height="400" 
    width="100%"
-title_url="__UP_titleurl__"
-/> 
+title_url="__UP_titleurl__">
 <Require feature="dynamic-height"/>
+</ModulePrefs>
+
   <UserPref name="title" display_name="title" datatype="string" required="false" default_value="Comments" />
   <UserPref name="URL" display_name="https://sites.google.com/site/axelbiotechinc/" required="true" default_value=""/>
   <Content type="html">
@@ -15,7 +16,7 @@ title_url="__UP_titleurl__"
         A.htm
         <input type="text" id="T1" size="20" />
         <input type="button" value="重整" onclick="SendMsg()" />
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14561.35182328995!2d120.6717438!3d24.1598777!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1413424299697" width="600" height="450" frameborder="0" style="border:0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14561.35182328995!2d120.6717438!3d24.1598777!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1413424299697" width="600" height="550" frameborder="0" style="border:0"></iframe>
 </div>
 <script type="text/javascript">
 function SendMsg()
