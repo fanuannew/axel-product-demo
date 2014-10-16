@@ -20,7 +20,7 @@ function SendMsg()
 </script>
 <div style="float:right">
         <input style="float:right;width:25px;height:18px" type="button" value="+" onclick="SendMsg()" />
-        <iframe src="b.htm" id="iframe" width="100%" height="100%"></iframe>
+        <img src="https://sites.google.com/a/axelbiotech.com/axel_cloud/_/rsrc/1412303423913/axel_info_platform/google_gmail.png" />
 
     </div>
   ]]> 
