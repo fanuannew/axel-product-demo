@@ -31,6 +31,10 @@ g_feed_arr[2] = pilink;
 var PosX = (screen.width-wwidth)/2; 
 var PosY = (screen.height-wheight)/2; 
 
+function load()
+{
+    document.getElementById('image').src = pic;
+}
 function SendMsg()
 {
     window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
@@ -38,7 +42,7 @@ function SendMsg()
 </script>
 <div style="float:right">
         <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
-        <a href=g_feed_arr[2] target="_blank"><img src=g_feed_arr[1]></a>
+        <a href=g_feed_arr[2] target="_blank"><img src="nothing.jpg" id="image"></a>
 
     </div>
   ]]> 
