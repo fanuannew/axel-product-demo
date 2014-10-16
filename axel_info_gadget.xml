@@ -19,8 +19,6 @@ function SendMsg()
 }
 </script>
 <div style="float:right">
-        A.htm
-        <input type="text" id="T1" size="20" />
         <input style="float:right" type="button" value="送出↓" onclick="SendMsg()" />
     </div>
   ]]> 
