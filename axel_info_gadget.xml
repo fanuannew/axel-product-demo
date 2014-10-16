@@ -19,9 +19,11 @@ function SendMsg()
 }
 </script>
 <div style="float:right">
-        <input type="button" value="重調視窗" onclick="SendMsg()" />
-        <iframe src="" id="ifrm" width="600" height="550" frameborder="0" style="border:0"></iframe>
-</div>
+        A.htm
+        <input type="text" id="T1" size="20" />
+        <input type="button" value="送出↓" onclick="SendMsg()" />
+        <iframe src="b.htm" id="iframe" width="100%" height="100%"></iframe>
+    </div>
   ]]> 
   </Content>
   </Module>
