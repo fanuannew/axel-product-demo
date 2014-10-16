@@ -17,7 +17,10 @@
 <![CDATA[
 <script>
 var prefs = new gadgets.Prefs();
+pic = prefs.getString("pic");
+pilink = prefs.getString("pilink");
 feed = prefs.getString("feed");
+
 wheight = prefs.getInt("w_height");
 wwidth = prefs.getInt("w_width");
 var g_feed_arr = [];
