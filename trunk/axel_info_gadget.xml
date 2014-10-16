@@ -6,6 +6,7 @@
    width="100%"
 title_url="__UP_titleurl__"
 /> 
+<Require feature="dynamic-height"/>
   <UserPref name="title" display_name="title" datatype="string" required="false" default_value="Comments" />
   <UserPref name="URL" display_name="https://sites.google.com/site/axelbiotechinc/" required="true" default_value=""/>
   <Content type="html">
