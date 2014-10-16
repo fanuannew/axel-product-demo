@@ -18,9 +18,8 @@ function SendMsg()
     gadgets.window.adjustHeight();
 }
 </script>
-<div style="position: relative>
-<div style="position: absolute; color: blue; right: 0;">
-        <input type="button" value="重調視窗" onclick="SendMsg()" /></div>
+<div style="float:right">
+        <input type="button" value="重調視窗" onclick="SendMsg()" />
         <iframe src="" id="ifrm" width="600" height="550" frameborder="0" style="border:0"></iframe>
 </div>
   ]]> 
