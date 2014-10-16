@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>  
 <ModulePrefs title="Dynamic Height" 
-    height="400"> 
-    <Require feature="dynamic-height"/>
-  </ModulePrefs>
+    scrolling="true"
+   height="26" 
+   width="26"
+  title_url="http://www.axelbiotech.com"
+/> 
 
   <UserPref name="title" display_name="title" datatype="string" required="false" default_value="Comments" />
   <UserPref name="pic" display_name="照片存放網址" required="true" default_value="http://www.axelbiotech.com"/>
