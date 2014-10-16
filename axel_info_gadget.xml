@@ -19,7 +19,7 @@ function SendMsg()
 }
 </script>
 <div style="float:right">
-        <input style="float:right;width:25px;height:18px" type="button" value="+" onclick="SendMsg()" />
+        <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
         <a href="http://www.gmail.com/" target="_blank"><img src="https://sites.google.com/a/axelbiotech.com/axel_cloud/_/rsrc/1412303423913/axel_info_platform/google_gmail.png"></a>
 
     </div>
