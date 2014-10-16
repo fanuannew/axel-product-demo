@@ -6,7 +6,9 @@
   </ModulePrefs>
 
   <UserPref name="title" display_name="title" datatype="string" required="false" default_value="Comments" />
-  <UserPref name="URL" display_name="https://sites.google.com/site/axelbiotechinc/" required="true" default_value=""/>
+  <UserPref name="pic" display_name="照片存放網址" required="true" default_value="http://www.axelbiotech.com"/>
+  <UserPref name="feed" display_name="照片超連結" required="true" default_value="http://www.axelbiotech.com"/>
+  <UserPref name="link2" display_name="縮放連結" required="true" default_value="http://www.axelbiotech.com"/>
   <Content type="html">
 <![CDATA[
 <script>
@@ -16,9 +18,10 @@ function SendMsg()
     gadgets.window.adjustHeight();
 }
 </script>
-        <input type="text" id="T1" size="20">
+<div style="position: absolute; color: blue; right: 0;">
         <input type="button" value="重調視窗" onclick="SendMsg()">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14561.35182328995!2d120.6717438!3d24.1598777!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1413424299697" id="ifrm" width="600" height="550" frameborder="0" style="border:0"></iframe>
+        <iframe src="" id="ifrm" width="600" height="550" frameborder="0" style="border:0"></iframe>
+</div>
   ]]> 
   </Content>
   </Module>
