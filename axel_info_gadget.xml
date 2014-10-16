@@ -27,6 +27,7 @@ var g_feed_arr = [];
 g_feed_arr[0] = feed;
 g_feed_arr[1] = pic;
 g_feed_arr[2] = pilink;
+load();
 
 var PosX = (screen.width-wwidth)/2; 
 var PosY = (screen.height-wheight)/2; 
