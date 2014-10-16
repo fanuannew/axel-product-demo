@@ -33,7 +33,9 @@ var PosY = (screen.height-wheight)/2;
 
 function load()
 {
-    document.getElementById('image').src = pic;
+    document.getElementById('image').src = g_feed_arr[1];
+    var a = document.getElementById('index');
+    a.href = g_feed_arr[2];
 }
 function SendMsg()
 {
@@ -42,7 +44,7 @@ function SendMsg()
 </script>
 <div style="float:right">
         <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
-        <a href=g_feed_arr[2] target="_blank"><img src="nothing.jpg" id="image"></a>
+        <a href=g_feed_arr[2] id= index target="_blank"><img src="nothing.jpg" id="image"></a>
 
     </div>
   ]]> 
