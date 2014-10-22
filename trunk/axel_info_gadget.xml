@@ -29,6 +29,7 @@ ifrmlink = prefs.getString("ifrmlink");
 bullout = prefs.getBool("bullout");
 bullin = prefs.getBool("bullin");
 var html = "";
+var imag = document.getElementById("image");
 
 wheight = prefs.getInt("w_height");
 wwidth = prefs.getInt("w_width");
@@ -61,11 +62,11 @@ function SendMsg()
       window.open(g_feed_arr[0],'_blank', "width="+screen.width+",height="+screen.height +",left=0,top=0");
     }
     else if(bullin){
-      if(document.getElementById("image").style.display == "block"){
+      if(imag.style.display == "block"){
         document.getElementById("image").style.display = "none";
         document.getElementById("iframe").style.display = "block";
       }
-      if(document.getElementById("image").style.display == "none"){
+      if(imag.style.display == "none"){
         document.getElementById("image").style.display = "block";
         document.getElementById("iframe").style.display = "none";
       }
