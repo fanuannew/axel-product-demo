@@ -30,7 +30,7 @@ g_feed_arr[1] = pic;
 g_feed_arr[2] = pilink;
 load();
 
-html="<a href=" + g_feed_arr[2] + " target='_blank'>" + "tit" + "</a>";
+html="<a href=g_feed_arr[2] id= index target='_blank'><img src='nothing.jpg' id='image'></a>";
 document.getElementById("feed_title").innerHTML=html;
 
 var PosX = (screen.width-wwidth)/2; 
