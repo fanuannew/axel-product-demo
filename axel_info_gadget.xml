@@ -48,11 +48,7 @@ function SendMsg()
     window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
 }
 </script>
-<div style="float:right">
-        <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
-        <a href=g_feed_arr[2] id= index target="_blank"><img src="nothing.jpg" id="image"></a>
-       
-    </div>
+
      <div id="feed_title">test</div>
   ]]> 
   </Content>
