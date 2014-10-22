@@ -38,7 +38,7 @@ var PosX = (screen.width-wwidth)/2;
 var PosY = (screen.height-wheight)/2; 
 
 var tit="";
-var s_tit = prefs.getString("TIT");
+var s_tit = prefs.getString("title");
 if (s_tit)
 {tit=gadgets.util.escapeString(s_tit);}
 
