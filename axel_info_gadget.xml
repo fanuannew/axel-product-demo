@@ -92,7 +92,6 @@ google.setOnLoadCallback(OnLoad);
         <iframe src='https://sites.google.com/a/axelbiotech.com/axel_info_gadgets/calendar' id='iframe' style='display:none' width='300px' height='500px'></iframe>
         
     </div><br>
-     <div id="feed_title"></div>
   ]]> 
   </Content>
   </Module>
