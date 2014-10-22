@@ -78,7 +78,7 @@ google.setOnLoadCallback(OnLoad);
     <div style="float:right">
         <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
         <a href=g_feed_arr[2] id= index target="_blank"><img src="nothing.jpg" style="display:block" id="image"></a>
-        <iframe src=g_feed_arr[3] id="iframe" style='display:none' width="180px" height="180px"></iframe>
+        <iframe src=g_feed_arr[3] id="iframe" style='display:block' width="180px" height="180px"></iframe>
     </div><br>
      
   ]]> 
