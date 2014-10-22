@@ -41,7 +41,7 @@ function OnLoad()
     document.getElementById('image').src = g_feed_arr[1];
     var a = document.getElementById('index');
     a.href = g_feed_arr[2];
-    html="<a href=g_feed_arr[2] id= index target='_blank'><img src='nothing.jpg' id='image'></a>";
+    html="<a href='http://tw.yahoo.com/' id= index target='_blank'><img src='nothing.jpg' id='image'></a>";
     document.getElementById("feed_title").innerHTML=html;
     
 }
