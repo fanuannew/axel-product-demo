@@ -60,7 +60,7 @@ function OnLoad()
 }
 function SendMsg()
 {
-    document.getElementById('iframe').src = g_feed_arr[3];
+    document.getElementById("iframe").src = g_feed_arr[3];
     if(bullout){
       window.open(g_feed_arr[0],'_blank', "width="+screen.width+",height="+screen.height +",left=0,top=0");
     }
