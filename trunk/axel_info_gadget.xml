@@ -49,6 +49,7 @@ function OnLoad()
 function SendMsg()
 {
     if(bullout){
+      window.open(g_feed_arr[0],'_blank','fullscreen,scrollbars')
     }
     else if(bullin){
     }
