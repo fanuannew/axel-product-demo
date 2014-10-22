@@ -64,6 +64,10 @@ function SendMsg()
         document.getElementById("iframe").style.display = "block";
         document.getElementById("iframe").contentDocument.location.reload(true);
       }
+      if(document.getElementById("image").style.display == "none"){
+        document.getElementById("image").style.display = "block";
+        document.getElementById("iframe").style.display = "none";
+      }
     }else{
     window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
     }
