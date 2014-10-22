@@ -52,8 +52,8 @@ if (s_tit)
 function OnLoad()
 {
     document.getElementById('image').src = g_feed_arr[1];
-    var a = document.getElementById('index');
-    a.href = g_feed_arr[2];
+    //var a = document.getElementById('index');
+    //a.href = g_feed_arr[2];
     
     document.getElementById('iframe').src = g_feed_arr[3];
     html="<iframe src='"+ g_feed_arr[3] +"' width='200px' height='500px'></iframe>";
