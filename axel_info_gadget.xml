@@ -25,6 +25,7 @@ var prefs = new gadgets.Prefs();
 pic = prefs.getString("pic");
 pilink = prefs.getString("pilink");
 feed = prefs.getString("feed");
+ifrmlink = prefs.getString("ifrmlink");
 bullout = prefs.getBool("bullout");
 bullin = prefs.getBool("bullin");
 var html = "";
@@ -35,6 +36,7 @@ var g_feed_arr = [];
 g_feed_arr[0] = feed;
 g_feed_arr[1] = pic;
 g_feed_arr[2] = pilink;
+g_feed_arr[3] = ifrmlink;
 
 var PosX = (screen.width-wwidth)/2; 
 var PosY = (screen.height-wheight)/2; 
@@ -77,7 +79,7 @@ google.setOnLoadCallback(OnLoad);
     <div style="float:right">
         <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
         <a href=g_feed_arr[2] id= index target="_blank"><img src="nothing.jpg" style="display:block" id="image"></a>
-        <iframe src="https://mail.google.com/tasks/ig" id="iframe" style='display:none' width="100%" height="100%"></iframe>
+        <iframe src=g_feed_arr[3] id="iframe" style='display:none' width="100%" height="100%"></iframe>
     </div><br>
      
   ]]> 
