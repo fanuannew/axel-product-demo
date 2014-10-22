@@ -15,6 +15,8 @@
   <UserPref name="w_width" display_name="視窗寬:" default_value="600"/>
   <UserPref name="bullout" display_name="開啟右上連結到全螢幕" datatype="bool" default_value="false" />
   <UserPref name="bullin" display_name="開啟右上連結到內部視窗" datatype="bool" default_value="false" />
+  <UserPref name="ifrmin" display_name="預設鑲入iframe視窗" datatype="bool" default_value="false" />
+  <UserPref name="ifrmlink" display_name="iframe連結:" required="true" default_value=""/>
   <Content type="html">
 <![CDATA[
 <script src="https://www.google.com/jsapi" type="text/javascript"></script>
@@ -57,6 +59,8 @@ function SendMsg()
       window.open(g_feed_arr[0],'_blank', "width="+screen.width+",height="+screen.height +",left=0,top=0");
     }
     else if(bullin){
+        document.getElementById("image").style.display = "none";
+
     }
     else{
     window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
@@ -66,7 +70,7 @@ google.setOnLoadCallback(OnLoad);
 </script>
     <div style="float:right">
         <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
-        <a href=g_feed_arr[2] id= index target="_blank"><img src="nothing.jpg" id="image"></a>
+        <a href=g_feed_arr[2] id= index target="_blank"><img src="nothing.jpg" style='display:none' id="image"></a>
     </div><br>
      
   ]]> 
