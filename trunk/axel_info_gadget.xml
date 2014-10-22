@@ -67,12 +67,12 @@ function SendMsg()
       if(document.getElementById("image").style.display == "block"){
         document.getElementById("image").style.display = "none";
         document.getElementById("iframe").style.display = "block";
-        setContent("");
+        gadgets.window.adjustHeight();
       }
       else{
         document.getElementById("image").style.display = "block";
         document.getElementById("iframe").style.display = "none";
-        setContent("");
+        gadgets.window.adjustHeight();
       }
     }else{
     window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
