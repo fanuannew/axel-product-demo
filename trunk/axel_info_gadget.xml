@@ -92,7 +92,7 @@ google.setOnLoadCallback(OnLoad);
     <div style="float:right">
         <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
         <a href="#" onclick="OpenWin()"><img src="nothing.jpg" style="display:block" id="image"></a>
-        <iframe id='iframe' style='display:block' width='180px' height='500px'></iframe>
+        <iframe id='iframe' style='display:none' width='180px' height='500px'></iframe>
         
     </div><br>
   ]]> 
