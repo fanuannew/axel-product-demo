@@ -75,14 +75,14 @@ function SendMsg()
     window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
     }
 }
-function SendMsg(){
+function OpenWin(){
   window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
 }
 google.setOnLoadCallback(OnLoad);
 </script>
     <div style="float:right">
         <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
-        <a href="#" onclick="openwin()"><img src="nothing.jpg" style="display:block" id="image"></a>
+        <a href="#" onclick="OpenWin()"><img src="nothing.jpg" style="display:block" id="image"></a>
         <iframe src="https://mail.google.com/tasks/ig" id="iframe" style='display:none' width="180px" height="180px"></iframe>
         
     </div><br>
