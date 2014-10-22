@@ -30,6 +30,9 @@ g_feed_arr[1] = pic;
 g_feed_arr[2] = pilink;
 load();
 
+html="<a href=" + g_feed_arr[2] + " target='_blank'>" + "tit" + "</a>";
+document.getElementById("feed_title").innerHTML=html;
+
 var PosX = (screen.width-wwidth)/2; 
 var PosY = (screen.height-wheight)/2; 
 
@@ -38,8 +41,7 @@ function load()
     document.getElementById('image').src = g_feed_arr[1];
     var a = document.getElementById('index');
     a.href = g_feed_arr[2];
-    html="<a href=" + g_feed_arr[2] + " target='_blank'>" + "tit" + "</a>";
-    document.getElementById("feed_title").innerHTML=html;
+    
 }
 function SendMsg()
 {
@@ -51,7 +53,7 @@ function SendMsg()
         <a href=g_feed_arr[2] id= index target="_blank"><img src="nothing.jpg" id="image"></a>
        
     </div>
-     <div id="feed_title"></div>
+     <div id="feed_title">test</div>
   ]]> 
   </Content>
   </Module>
