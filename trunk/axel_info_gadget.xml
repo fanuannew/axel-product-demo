@@ -37,6 +37,11 @@ g_feed_arr[2] = pilink;
 var PosX = (screen.width-wwidth)/2; 
 var PosY = (screen.height-wheight)/2; 
 
+var tit="";
+var s_tit = prefs.getString("TIT");
+if (s_tit)
+{tit=gadgets.util.escapeString(s_tit);}
+
 function OnLoad()
 {
     document.getElementById('image').src = g_feed_arr[1];
