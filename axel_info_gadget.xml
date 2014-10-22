@@ -13,6 +13,7 @@
   <UserPref name="feed" display_name="縮放連結" required="true" default_value="http://www.axelbiotech.com"/>
   <UserPref name="w_height" display_name="視窗高:" default_value="480"/>
   <UserPref name="w_width" display_name="視窗寬:" default_value="600"/>
+  <UserPref name="forout" display_name="強迫圖片連結開到小視窗" datatype="bool" default_value="false" />
   <UserPref name="bullout" display_name="開啟右上連結到全螢幕" datatype="bool" default_value="false" />
   <UserPref name="bullin" display_name="開啟右上連結到內部視窗" datatype="bool" default_value="false" />
   <UserPref name="ifrmin" display_name="預設鑲入iframe視窗" datatype="bool" default_value="false" />
@@ -28,6 +29,7 @@ feed = prefs.getString("feed");
 ifrmlink = prefs.getString("ifrmlink");
 bullout = prefs.getBool("bullout");
 bullin = prefs.getBool("bullin");
+forout = prefs.getBool("forout");
 var html = "";
 
 wheight = prefs.getInt("w_height");
