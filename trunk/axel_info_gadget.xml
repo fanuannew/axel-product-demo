@@ -76,7 +76,11 @@ function SendMsg()
     }
 }
 function OpenWin(){
-  window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
+  if(forout){
+    window.open(g_feed_arr[2], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
+  }else{
+    window.open(g_feed_arr[2], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
+  }
 }
 google.setOnLoadCallback(OnLoad);
 </script>
