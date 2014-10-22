@@ -79,7 +79,7 @@ function OpenWin(){
   if(forout){
     window.open(g_feed_arr[2], '_blank').focus();
   }else{
-    window.open(g_feed_arr[2], '_blank').focus();
+    window.open(g_feed_arr[2], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX);
   }
 }
 google.setOnLoadCallback(OnLoad);
