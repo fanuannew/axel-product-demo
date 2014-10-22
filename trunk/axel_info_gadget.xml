@@ -64,7 +64,8 @@ function SendMsg()
       if(document.getElementById("image").style.display == "block"){
         document.getElementById("image").style.display = "none";
         document.getElementById("iframe").style.display = "block";
-        document.getElementById("iframe").contentDocument.location.reload(true);
+        var oIf = document.getElementById('iframe');
+        oIf.src = oIf.src;
       }
       if(document.getElementById("image").style.display == "none"){
         document.getElementById("image").style.display = "block";
