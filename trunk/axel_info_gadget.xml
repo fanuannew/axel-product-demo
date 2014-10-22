@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>  
-<ModulePrefs title="Dynamic Height" 
+<ModulePrefs title="Axel_info_gadget" 
     scrolling="true"
    height="200" 
    width="180"
@@ -23,6 +23,8 @@ var prefs = new gadgets.Prefs();
 pic = prefs.getString("pic");
 pilink = prefs.getString("pilink");
 feed = prefs.getString("feed");
+bulletout = prefs.getBool("bulletout");
+bulletin = prefs.getBool("bulletin");
 var html = "";
 
 wheight = prefs.getInt("w_height");
@@ -46,7 +48,13 @@ function OnLoad()
 }
 function SendMsg()
 {
+    if(bullout){
+    }
+    else if(bullin){
+    }
+    else{
     window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
+    }
 }
 google.setOnLoadCallback(OnLoad);
 </script>
