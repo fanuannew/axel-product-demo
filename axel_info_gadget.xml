@@ -15,6 +15,7 @@
   <UserPref name="w_width" display_name="視窗寬:" default_value="600"/>
   <Content type="html">
 <![CDATA[
+<script src="http://www.google.com/jsapi?key=" type="text/javascript"></script>
 <script>
 var prefs = new gadgets.Prefs();
 pic = prefs.getString("pic");
@@ -30,23 +31,25 @@ g_feed_arr[1] = pic;
 g_feed_arr[2] = pilink;
 load();
 
-html="<a href=g_feed_arr[2] id= index target='_blank'><img src='nothing.jpg' id='image'></a>";
-document.getElementById("feed_title").innerHTML=html;
+
 
 var PosX = (screen.width-wwidth)/2; 
 var PosY = (screen.height-wheight)/2; 
 
-function load()
+function OnLoad()
 {
     document.getElementById('image').src = g_feed_arr[1];
     var a = document.getElementById('index');
     a.href = g_feed_arr[2];
+    html="<a href=g_feed_arr[2] id= index target='_blank'><img src='nothing.jpg' id='image'></a>";
+    document.getElementById("feed_title").innerHTML=html;
     
 }
 function SendMsg()
 {
     window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
 }
+google.setOnLoadCallback(OnLoad);
 </script>
     <div style="float:right">
         <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
