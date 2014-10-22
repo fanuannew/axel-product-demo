@@ -15,7 +15,7 @@
   <UserPref name="w_width" display_name="視窗寬:" default_value="600"/>
   <Content type="html">
 <![CDATA[
-<script src="http://www.google.com/jsapi?key=" type="text/javascript"></script>
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 <script>
 var prefs = new gadgets.Prefs();
 pic = prefs.getString("pic");
