@@ -66,7 +66,7 @@ function SendMsg()
         document.getElementById("image").style.display = "none";
         document.getElementById("iframe").style.display = "block";
       }
-      else if(imag.style.display == "none"){
+      else{
         document.getElementById("image").style.display = "block";
         document.getElementById("iframe").style.display = "none";
       }
