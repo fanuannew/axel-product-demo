@@ -59,9 +59,12 @@ function SendMsg()
       window.open(g_feed_arr[0],'_blank', "width="+screen.width+",height="+screen.height +",left=0,top=0");
     }
     else if(bullin){
+      if(document.getElementById("image").style.display == "block"){
         document.getElementById("image").style.display = "none";
-
-    }
+      }
+      if(document.getElementById("image").style.display == "none"){
+        document.getElementById("image").style.display = "block";
+       }
     else{
     window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
     }
