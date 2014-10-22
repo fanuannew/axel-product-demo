@@ -92,8 +92,9 @@ google.setOnLoadCallback(OnLoad);
         <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
         <a href="#" onclick="OpenWin()"><img src="nothing.jpg" style="display:block" id="image"></a>
         <iframe src="B.html" id='iframe' style='display:none' width='180px' height='500px'></iframe>
-        <div id="feed_title"></div>
+        
     </div><br>
+    <div id="feed_title"></div>
   ]]> 
   </Content>
   </Module>
