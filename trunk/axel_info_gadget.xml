@@ -49,7 +49,7 @@ function OnLoad()
 function SendMsg()
 {
     if(bullout){
-      window.open(g_feed_arr[0],'_blank');
+      window.open(g_feed_arr[0],'_blank', "width="+screen.width+",height="+screen.height +",left=0,top=0");
     }
     else if(bullin){
     }
