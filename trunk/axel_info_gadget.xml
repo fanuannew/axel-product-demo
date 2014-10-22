@@ -54,7 +54,7 @@ function OnLoad()
     document.getElementById('image').src = g_feed_arr[1];
     var a = document.getElementById('index');
     a.href = g_feed_arr[2];
-    html="<iframe src='"+ g_feed_arr[3] +"' id='iframe' style='display:none' width='300px' height='500px'></iframe>";
+    //html="<iframe src='"+ g_feed_arr[3] +"' id='iframe' style='display:none' width='300px' height='500px'></iframe>";
     document.getElementById("feed_title").innerHTML=html;
 }
 function SendMsg()
