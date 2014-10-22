@@ -53,7 +53,7 @@ function SendMsg()
         <a href=g_feed_arr[2] id= index target="_blank"><img src="nothing.jpg" id="image"></a>
        
     </div><br>
-     <div id="feed_title">test</div>
+     <div id="feed_title"></div>
   ]]> 
   </Content>
   </Module>
