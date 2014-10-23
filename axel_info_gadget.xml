@@ -56,7 +56,7 @@ function OnLoad()
     //a.href = g_feed_arr[2];
     
     document.getElementById('iframe').src = g_feed_arr[3];
-    html="<iframe src='"+ g_feed_arr[3] +"' width='180px' height='500px'></iframe>";
+    html="<iframe src='"+ g_feed_arr[3] +"' id='iframe' width='180px' height='500px'></iframe>";
     document.getElementById("feed_title").innerHTML=html;
 }
 function SendMsg()
@@ -91,8 +91,7 @@ google.setOnLoadCallback(OnLoad);
     <div style="float:right">
         <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
         <a href="#" onclick="OpenWin()"><img src="nothing.jpg" style="display:block" id="image"></a>
-        <iframe src="https://sites.google.com/a/axelbiotech.com/axel_info_gadgets/calendar" id='iframe' style='display:none' width='150px' height='500px'></iframe>
-        
+                
     </div><br>
     <div id="feed_title"></div>
   ]]> 
