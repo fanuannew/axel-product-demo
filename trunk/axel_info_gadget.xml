@@ -91,7 +91,7 @@ google.setOnLoadCallback(OnLoad);
     <div style="float:right">
         <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
         <a href="#" onclick="OpenWin()"><img src="nothing.jpg" style="display:block" id="image"></a>
-        <iframe src="https://sites.google.com/a/axelbiotech.com/axel_info_gadgets/calendar" id='iframe' style='display:none' width='150px' height='500px'></iframe>       
+        <iframe src="https://sites.google.com/a/axelbiotech.com/axel_info_gadgets/calendar" id='iframe' style='display:none' width='250px' height='500px'></iframe>       
     </div><br>
     <div id="feed_title"></div>
   ]]> 
