@@ -14,7 +14,7 @@ title_url="__UP_titleurl__"
 		  
 function ChangeDisabled(value){
 // 載入 Visualization API
-  var URL = 'http://spreadsheets.google.com/tq?key=<你試算表的 key>';
+  var URL = 'http://spreadsheets.google.com/tq?key=1MAxYcyGdJxwN8yJlUj4u9kypTO6gyzqpXlagb4xUBhg';
   google.load('visualization', '1');
   var query = new google.visualization.Query(URL);
 // 使用 query language 查詢資料
