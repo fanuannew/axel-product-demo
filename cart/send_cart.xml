@@ -15,6 +15,21 @@
 
   <Content type="html">
 <![CDATA[
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+<script>
+var prefs = new gadgets.Prefs();
+pilink = prefs.getString("pilink");
+feed = prefs.getString("feed");
+var html = "";
+
+wheight = prefs.getInt("w_height");
+wwidth = prefs.getInt("w_width");
+var g_feed_arr = [];
+g_feed_arr[0] = feed;
+g_feed_arr[1] = pilink;
+
+var PosX = (screen.width-wwidth)/2; 
+var PosY = (screen.height-wheight)/2; 
 function SendMsg()
 {
   
