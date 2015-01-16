@@ -32,7 +32,7 @@ var PosX = (screen.width-wwidth)/2;
 var PosY = (screen.height-wheight)/2; 
 function SendMsg()
 {
-  
+  window.open(g_feed_arr[0], "_blank", "height="+wheight+",width="+wwidth+",top="+PosY+",left="+PosX );
 }
 
 google.setOnLoadCallback(OnLoad);
