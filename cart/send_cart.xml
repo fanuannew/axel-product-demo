@@ -37,7 +37,7 @@ function SendMsg()
 
 google.setOnLoadCallback(OnLoad);
 </script>
-<div style="float:right">
+<div style="float:left">
         <input style="float:left;width:60px;height:25px" type="button" value="預購" onclick="SendMsg()" />
     </div><br>
     <div style="display:none" id="feed_title"></div> 
