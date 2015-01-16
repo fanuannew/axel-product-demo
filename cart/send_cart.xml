@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>  
+<ModulePrefs title="send_cart_gadget" 
+    scrolling="true"
+   height="200" 
+   width="180"
+  title_url="http://www.axelbiotech.com">
+</ModulePrefs>
+
+  <UserPref name="title" display_name="title" datatype="string" required="false" default_value="Comments" />
+  <UserPref name="pilink" display_name="照片超連結" required="true" default_value="http://www.axelbiotech.com"/>
+  <UserPref name="feed" display_name="縮放連結" required="true" default_value="http://www.axelbiotech.com"/>
+  <UserPref name="w_height" display_name="視窗高:" default_value="480"/>
+  <UserPref name="w_width" display_name="視窗寬:" default_value="600"/>
+
+  <Content type="html">
+<![CDATA[
+
+ ]]> 
+  </Content>
+  </Module>
