@@ -20,9 +20,7 @@ function SendMsg()
   
 }
 <div style="float:right">
-        <input style="float:right;width:25px;height:18px" type="button" value="↗" onclick="SendMsg()" />
-        <a href="#" onclick="OpenWin()"><img src="nothing.jpg" style="display:block" id="image"></a>
-        <iframe src="" id='iframe' style='display:none' width='250px' height='500px'></iframe> 
+        <input style="float:right;width:25px;height:18px" type="button" value="預購" onclick="SendMsg()" />
     </div><br>
     <div style="display:none" id="feed_title"></div> 
  ]]> 
